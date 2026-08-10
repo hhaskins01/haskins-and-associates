@@ -1,0 +1,1 @@
+Upload ALL extracted files to the ROOT of the existing GitHub repository, including haskins-diamond-background-v15.png. Replace existing files and commit. Wait 1-2 minutes, then Ctrl+F5 the live site.
