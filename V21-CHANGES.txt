@@ -1,0 +1,10 @@
+Haskins & Associates v21 — Premium Compact Conversion Edition
+
+Changes:
+- Reduced homepage length substantially by removing repeated/secondary sections.
+- Kept the strongest conversion sections: hero, associates, credentials, planning choices, process, contact and regulatory disclosure.
+- Shortened associate cards on the homepage while retaining direct contact options.
+- Compact desktop and mobile spacing.
+- Simplified navigation to the four actions customers need most.
+- Preserved service/SEO pages and AI/Botpress-ready integration from v20.
+- Preserved the diamond visual identity and existing compliance disclosures.
