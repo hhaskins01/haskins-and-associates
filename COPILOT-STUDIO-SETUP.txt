@@ -1,0 +1,16 @@
+HASKINS & ASSOCIATES — MICROSOFT COPILOT STUDIO CONNECTION
+
+The website AI is already responsive and continues to work as an on-page concierge.
+To replace it with your real Microsoft Copilot Studio agent:
+
+1. Open your agent in Microsoft Copilot Studio.
+2. Test it, then Publish it.
+3. Open Settings > Security > Authentication. For a public website embed, Microsoft documents the Embed code option when No authentication is selected.
+4. Open Channels > Web app / Custom website and copy the HTTPS URL used by the iframe embed code.
+5. Open ai-config.js in this website package.
+6. Paste that HTTPS URL between the quotes after copilotEmbedUrl.
+7. Save, upload all files to GitHub, and commit.
+8. Republish the Copilot agent whenever you change its knowledge/instructions.
+
+IMPORTANT: Do not paste API keys, client secrets, passwords or Direct Line secrets into GitHub or ai-config.js.
+For authenticated/advanced integrations, use a secure backend and Microsoft 365 Agents SDK/Direct Line rather than exposing secrets in browser code.

@@ -1,0 +1,23 @@
+HASKINS & ASSOCIATES - FREE AI BOT SETUP (BOTPRESS)
+
+The website is already prepared to use Botpress Webchat.
+Botpress currently offers a $0 pay-as-you-go plan with a monthly AI credit. Usage beyond the included credit can incur AI spend, so monitor usage.
+
+1. Go to https://botpress.com and choose Start for free.
+2. Create an agent called: Haskins & Associates AI Concierge
+3. In the agent, add your live website as a Knowledge Base website source:
+   https://hhaskins01.github.io/haskins-and-associates/
+4. In the Autonomous Node instructions, use the prompt below.
+5. Publish the agent.
+6. Open Webchat > Deploy Settings and copy the Embed code.
+7. From the embed code, copy the botId and clientId values.
+8. Open botpress-config.js and replace PASTE_BOT_ID_HERE and PASTE_CLIENT_ID_HERE.
+9. Upload botpress-config.js and index.html to GitHub and Commit changes.
+
+PROMPT FOR THE AGENT
+You are the Haskins & Associates AI Financial Concierge. You provide general, educational financial-planning information and help visitors identify the most relevant planning area and Associate. Use the Haskins & Associates website knowledge base as your primary source. Do not provide personalised financial advice, product recommendations, investment instructions, tax advice, legal advice, or guarantees. Do not ask for or accept ID numbers, banking details, passwords, policy numbers, account numbers, medical records, or other sensitive data. For personal recommendations, explain that an Associate needs to understand the visitor's circumstances through the formal advice process. Help with: retirement planning, investment and wealth planning, risk planning, wills and estate planning, education planning, short-term insurance, super fund/employee benefits, business assurance, and general financial reviews. When appropriate, invite the visitor to book a financial check-up or contact Haskins & Associates. Keep answers clear, warm, concise and professional.
+
+IMPORTANT
+- Do not put Botpress API tokens or secret keys in GitHub.
+- botId and clientId from the Webchat embed are public identifiers intended for website use.
+- Keep the built-in concierge as a fallback until the Botpress IDs are added.
