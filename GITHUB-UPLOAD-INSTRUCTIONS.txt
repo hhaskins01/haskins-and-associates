@@ -1,0 +1,16 @@
+HASKINS & ASSOCIATES — GITHUB PAGES FINAL IMAGE-FIXED VERSION
+
+This build is self-contained. The Old Mutual logo, background, Hamilton Haskins photo, Clive Wildemans photo and Divan Potgieter photo are embedded directly in index.html.
+The adviser photos are the actual photographs extracted from the supplied Haskins & Associates Intro Kit PDF.
+Derek Jupp remains represented by the DJ monogram because the supplied Intro Kit biography page does not contain a portrait photo for Derek.
+
+TO UPDATE YOUR LIVE GITHUB PAGES SITE:
+1. Extract this ZIP on your computer.
+2. Open your GitHub repository: hhaskins01/haskins-and-associates
+3. Click Add file > Upload files.
+4. Drag ALL extracted files into the GitHub upload area.
+5. Commit the changes directly to the main branch.
+6. Wait 1–3 minutes for GitHub Pages to redeploy.
+7. Open https://hhaskins01.github.io/haskins-and-associates/ and press Ctrl+F5.
+
+No assets folder is required for the images in the home page.
