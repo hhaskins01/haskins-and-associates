@@ -1,0 +1,15 @@
+Haskins & Associates v24 — Premium Conversion Redesign
+
+Inspired by strong information architecture used by leading financial-services websites:
+• strong first-screen proposition
+• outcome-led solution cards with deeper pages behind them
+• concise proof / why-us section
+• compact team presentation
+• collapsed qualifications rather than a long credentials wall
+• shortened planning process
+• three useful insight teasers
+• shorter lead form that still emails Hamilton and records the selected Associate
+• Botpress-ready AI Concierge retained
+• existing SEO service pages retained
+
+No PPS wording, artwork, testimonials or proprietary design assets were copied.
