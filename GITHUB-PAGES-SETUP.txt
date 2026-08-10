@@ -1,0 +1,12 @@
+HASKINS & ASSOCIATES — GITHUB PAGES
+
+1. Extract this ZIP on your computer.
+2. In the GitHub repository upload page, upload the CONTENTS of this folder — not the ZIP itself.
+3. Make sure index.html appears in the root of the repository alongside privacy.html, regulatory.html, assets, services and guides.
+4. Commit the uploaded files.
+5. Open repository Settings > Pages.
+6. Under Build and deployment, choose Deploy from a branch.
+7. Branch: main. Folder: / (root). Click Save.
+8. GitHub will generate the live Pages URL after deployment.
+
+Do not upload banking credentials, PINs, passwords, policy numbers or client confidential information to the public repository.
