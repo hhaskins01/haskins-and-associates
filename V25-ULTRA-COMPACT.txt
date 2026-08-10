@@ -1,0 +1,10 @@
+Haskins & Associates v25 — Ultra Compact Homepage
+
+Changes:
+- Removed Why Us and Insights from the homepage.
+- Removed duplicate final call-to-action.
+- Reduced services to compact choice cards linking to detailed pages.
+- Shortened Associate cards while keeping all four Associates.
+- Kept qualifications behind an expandable control.
+- Condensed the Diamond process.
+- Kept lead form, selected Associate email capture, AI Concierge, SEO service pages and legal disclosures.

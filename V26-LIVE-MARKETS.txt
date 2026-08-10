@@ -1,0 +1,15 @@
+Haskins & Associates v26 — Live Market Snapshot
+
+Added a compact market strip without materially lengthening the homepage:
+- USD/ZAR
+- GBP/ZAR
+- EUR/ZAR
+- Brent crude oil
+- WTI crude oil
+- Bitcoin/ZAR
+- SARB policy rate: 7.00%
+- Prime rate: 10.50%
+
+FX and oil use the TradingView embedded ticker tape.
+Bitcoin/ZAR uses CoinGecko's public price endpoint and refreshes every 60 seconds.
+Market feeds may be delayed and are informational only.
