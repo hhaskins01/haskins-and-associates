@@ -1,0 +1,26 @@
+Haskins & Associates v31 — Website Lead Capture
+
+Lead delivery:
+- All enquiry-form submissions are sent to hhaskins@oldmutual.com via FormSubmit.
+- Email includes: client name, phone, email, selected Associate, planning area,
+  message, privacy consent, website page, referral page and submission time.
+- AI Concierge interest is carried into the enquiry where applicable.
+- A browser-side local backup of the last submitted form is saved before navigation.
+
+IMPORTANT — ONE-TIME ACTIVATION:
+FormSubmit normally sends a confirmation/activation email to hhaskins@oldmutual.com
+the first time the address is used on a website. Open that email and click the
+activation/confirmation link. Until that activation is completed, live lead emails
+may not be delivered.
+
+TEST:
+1. Publish this package to GitHub Pages.
+2. Submit a test enquiry using your own contact details.
+3. Check hhaskins@oldmutual.com (including Junk/Quarantine).
+4. If FormSubmit sends an activation request, approve it.
+5. Submit a second test lead and confirm it arrives with the selected Associate.
+
+Note:
+Direct WhatsApp, telephone and mailto clicks leave the website and cannot be
+guaranteed to generate a separate lead email without a server-side CRM/integration.
+The on-site enquiry form is the reliable lead-capture route.
