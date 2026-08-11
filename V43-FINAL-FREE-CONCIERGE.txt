@@ -1,0 +1,17 @@
+Haskins & Associates v43 — Final Free Concierge Build
+
+This final package retains:
+- Private Client Concierge (free, client-side, no paid API required)
+- Professional adviser CTA: "Choose this Financial Adviser →"
+- Adviser hierarchy and Divan photo alignment
+- Conversion-focused homepage improvements
+- Markets at a Glance
+- Weather removed
+- FormSubmit lead capture to hphaskins68@gmail.com
+- Security hardening from v39
+- No exposed API keys
+- No DeepAI paid API dependency
+
+Important:
+The Private Client Concierge is a guided financial assistant, not a generative AI service.
+All personalised financial advice remains with the financial adviser.

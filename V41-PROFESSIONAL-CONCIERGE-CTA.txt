@@ -1,0 +1,14 @@
+Haskins & Associates v41
+
+Changes:
+- Removed misleading 'AI' wording from the built-in rule-based assistant.
+- Renamed it to Financial Concierge / Guided financial planning assistant.
+- Reworked the welcome language to be more professional and user-friendly.
+- Improved adviser handoff wording to 'Request a consultation'.
+- Replaced 'Choose this Associate' with personalised:
+  'Request a consultation with Hamilton/Clive/Derek/Divan'.
+- Retained all v40 design, v39 security hardening and Gmail/FormSubmit lead routing.
+
+Important:
+The built-in concierge should only be labelled 'AI' again once a real secure
+Gemini/API backend is connected. This avoids misrepresenting a rules-based tool as AI.

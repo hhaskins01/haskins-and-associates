@@ -1,0 +1,10 @@
+Haskins & Associates v42
+
+Requested wording updates:
+- Adviser card CTA changed to: "Choose this Financial Adviser →"
+- Concierge renamed to: "Private Client Concierge"
+- Concierge subtitle: "Financial guidance & adviser matching"
+- Accessible labels and self-description updated consistently.
+
+All v41 functionality, v40 presentation, v39 security hardening,
+and FormSubmit lead routing to hphaskins68@gmail.com are retained.
