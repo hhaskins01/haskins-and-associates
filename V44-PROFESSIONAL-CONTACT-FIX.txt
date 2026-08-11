@@ -1,0 +1,8 @@
+Haskins & Associates v44 — Contact Section Fix
+
+Corrected:
+- Removed the accidentally visible FormSubmit activation/internal developer note.
+- Removed internal FormSubmit comments from the public homepage.
+- Updated contact wording from "Choose an Associate" to "Choose a Financial Adviser".
+- Lead routing to hphaskins68@gmail.com remains operational in the form action.
+- Private Client Concierge and all prior security/design improvements retained.
