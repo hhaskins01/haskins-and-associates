@@ -11,6 +11,6 @@ Implemented:
 - 'Markets at a Glance' presentation retained.
 - Gemini AI Financial Concierge quick choices changed to goal-based prompts.
 - Gemini continues to route advice/meeting requests into the enquiry form.
-- FormSubmit lead delivery to hhaskins@oldmutual.com retained.
+- FormSubmit lead delivery to hphaskins68@gmail.com retained.
 - Divan Potgieter photo professionally re-aligned/cropped using CSS object-position.
 - Existing adviser hierarchy, SEO pages, legal pages and lead-capture functionality retained.

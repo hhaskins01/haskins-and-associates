@@ -1,0 +1,25 @@
+Haskins & Associates v39 — Final Security-Hardened Build
+
+Retained:
+- v38 operational Smart Financial Concierge
+- Gmail/FormSubmit lead destination: hphaskins68@gmail.com
+- Adviser hierarchy and Divan photo alignment
+- Client journey, Insights, Markets at a Glance and conversion upgrades
+- Weather remains removed
+
+Security improvements:
+- Removed obsolete Botpress external script and duplicate chatbot dependency
+- Added Content Security Policy for static GitHub Pages deployment
+- Restricted form submission to self/FormSubmit
+- Blocked browser plugin/object embedding
+- Added strict referrer policy
+- Added noopener/noreferrer to external new-tab links
+- Added form input length limits and sanitation
+- Added sensitive-data warning to enquiry form
+- Retained sensitive-data warning in AI concierge
+- No Gemini/API key embedded in public website code
+- Added SECURITY.txt deployment/security notes
+
+Operational note:
+After publishing, FormSubmit still requires activation for hphaskins68@gmail.com.
+GitHub Pages should have 'Enforce HTTPS' enabled in Settings > Pages.

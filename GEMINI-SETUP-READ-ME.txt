@@ -21,6 +21,6 @@ DO NOT paste the Gemini API key into index.html or commit it to GitHub.
 
 LEADS:
 The existing FormSubmit enquiry form remains configured to send leads to:
-hhaskins@oldmutual.com
+hphaskins68@gmail.com
 
 The AI bot routes advice/meeting/quote requests to that enquiry form.

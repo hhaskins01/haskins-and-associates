@@ -1,0 +1,14 @@
+Haskins & Associates v37 — Gmail Lead Capture
+
+All website enquiry leads are now routed through FormSubmit to:
+hphaskins68@gmail.com
+
+ONE-TIME ACTIVATION
+1. Upload v37 to GitHub Pages.
+2. Submit one test enquiry from the live website.
+3. Check hphaskins68@gmail.com for the FormSubmit activation email.
+4. Click "Activate Form".
+5. Submit a second test enquiry.
+6. Confirm the lead arrives in Gmail.
+
+The Gemini-ready AI concierge continues to direct prospects to the same enquiry form.

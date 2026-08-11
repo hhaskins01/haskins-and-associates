@@ -1,0 +1,16 @@
+Haskins & Associates v38 — AI Concierge Repair
+
+The AI concierge is now operational immediately after publishing:
+- No API key required for the built-in smart concierge.
+- No dead Gemini placeholder.
+- Handles retirement, investments, risk/family protection, short-term insurance,
+  wills/estate planning, education planning, business assurance and financial reviews.
+- Recognises adviser names and appointment/contact requests.
+- Directs advice/quote/meeting requests to the secure website enquiry form.
+- Attempts to pre-fill the client's area of interest.
+- FormSubmit lead destination remains hphaskins68@gmail.com.
+- A future secure Gemini Worker can be enabled by inserting the Worker URL into
+  SECURE_GEMINI_ENDPOINT; if Gemini ever fails, the local concierge remains available.
+
+This design is intentionally hybrid so the website bot never appears broken simply because
+an external AI endpoint is unavailable.

@@ -1,0 +1,22 @@
+Haskins & Associates Website Security
+
+This website is a static informational site and does not intentionally collect passwords,
+PINs, banking credentials, payment-card details or identity-document numbers.
+
+If you believe you have identified a security issue, please contact the practice directly
+and avoid including sensitive client information in the report.
+
+Security measures in v39 include:
+- HTTPS-compatible GitHub Pages deployment
+- Content Security Policy limiting executable third-party content
+- Removal of the obsolete Botpress third-party script
+- Form submission restricted by CSP to FormSubmit
+- External-tab protections (noopener/noreferrer)
+- Input length limits and defensive text sanitation
+- Sensitive-data warnings on both the enquiry form and AI concierge
+- No Gemini/API secret stored in the public website files
+
+Important:
+No public website can be guaranteed to be 'hack proof'. Account security remains critical.
+Enable multi-factor authentication on GitHub, Gmail, domain/DNS accounts and any future
+Cloudflare/Google AI account.

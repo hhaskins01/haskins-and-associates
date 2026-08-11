@@ -5,5 +5,5 @@ Change:
 - Weather navigation references removed.
 - Market/JSE snapshot retained.
 - Gemini-ready AI Financial Concierge retained.
-- FormSubmit lead capture to hhaskins@oldmutual.com retained.
+- FormSubmit lead capture to hphaskins68@gmail.com retained.
 - Adviser titles, Divan photograph, service pages, regulatory and privacy pages retained.
