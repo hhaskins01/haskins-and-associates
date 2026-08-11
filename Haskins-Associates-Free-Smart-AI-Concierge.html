@@ -1,0 +1,261 @@
+<!-- Haskins & Associates Smart AI Concierge
+     100% client-side / no API key / no monthly cost.
+     Add this entire block just before </body> on your website.
+-->
+<style>
+  :root{
+    --ha-green:#78dfc1;
+    --ha-deep:#03271f;
+    --ha-deeper:#011914;
+    --ha-line:rgba(120,223,193,.24);
+    --ha-text:#f4fff9;
+    --ha-muted:#a8c8be;
+  }
+  #ha-ai-launcher{
+    position:fixed; right:22px; bottom:22px; z-index:9998;
+    display:flex; align-items:center; gap:10px;
+    padding:13px 16px; border-radius:999px;
+    border:1px solid var(--ha-line);
+    background:rgba(1,25,20,.96); color:var(--ha-text);
+    box-shadow:0 16px 40px rgba(0,0,0,.28);
+    cursor:pointer; font:700 14px/1.2 system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  }
+  #ha-ai-launcher .spark{
+    width:34px;height:34px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#78dfc1,#2bbf99);color:#03271f;font-size:18px;
+  }
+  #ha-ai-panel{
+    position:fixed; right:22px; bottom:82px; z-index:9999;
+    width:min(390px,calc(100vw - 28px)); max-height:min(680px,calc(100vh - 110px));
+    display:none; flex-direction:column; overflow:hidden;
+    border:1px solid var(--ha-line); border-radius:22px;
+    background:linear-gradient(180deg,#062f27,#011914);
+    box-shadow:0 24px 70px rgba(0,0,0,.38);
+    color:var(--ha-text);
+    font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  }
+  #ha-ai-panel.open{display:flex}
+  .ha-ai-head{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 16px 14px;border-bottom:1px solid var(--ha-line)
+  }
+  .ha-ai-head-left{display:flex;align-items:center;gap:11px}
+  .ha-ai-logo{
+    width:38px;height:38px;border-radius:13px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#78dfc1,#2bbf99);color:#03271f;font-size:19px
+  }
+  .ha-ai-title{font-weight:800;font-size:15px}
+  .ha-ai-sub{font-size:11px;color:var(--ha-muted);margin-top:2px}
+  .ha-ai-close{background:none;border:0;color:var(--ha-muted);font-size:22px;cursor:pointer}
+  .ha-ai-messages{
+    padding:14px; overflow:auto; display:flex;flex-direction:column;gap:10px;
+    min-height:270px; max-height:430px;
+  }
+  .ha-msg{
+    max-width:88%; padding:11px 12px;border-radius:15px;font-size:13px;line-height:1.45;
+    white-space:pre-wrap
+  }
+  .ha-msg.bot{align-self:flex-start;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.07)}
+  .ha-msg.user{align-self:flex-end;background:#78dfc1;color:#03271f;font-weight:650}
+  .ha-ai-quick{
+    display:flex;gap:7px;overflow:auto;padding:0 14px 12px
+  }
+  .ha-chip{
+    flex:0 0 auto;padding:8px 10px;border-radius:999px;border:1px solid var(--ha-line);
+    background:rgba(120,223,193,.04);color:#dff8ef;font-size:11px;cursor:pointer
+  }
+  .ha-ai-inputrow{
+    display:grid;grid-template-columns:1fr auto;gap:8px;padding:12px 14px 14px;
+    border-top:1px solid var(--ha-line)
+  }
+  #ha-ai-input{
+    width:100%;box-sizing:border-box;border-radius:12px;border:1px solid var(--ha-line);
+    background:rgba(255,255,255,.04);color:var(--ha-text);padding:11px 12px;outline:none
+  }
+  #ha-ai-send{
+    border:0;border-radius:12px;padding:0 14px;background:#78dfc1;color:#03271f;font-weight:850;cursor:pointer
+  }
+  .ha-ai-disclaimer{
+    padding:0 14px 13px;color:#86a89d;font-size:10px;line-height:1.35
+  }
+  .ha-ai-link{
+    display:inline-block;margin-top:8px;color:#78dfc1;font-weight:800;text-decoration:none
+  }
+  @media(max-width:560px){
+    #ha-ai-panel{right:14px;bottom:78px}
+    #ha-ai-launcher{right:14px;bottom:14px}
+  }
+</style>
+
+<button id="ha-ai-launcher" aria-label="Open AI Financial Concierge">
+  <span class="spark">✦</span>
+  <span>AI Financial Concierge</span>
+</button>
+
+<section id="ha-ai-panel" aria-label="Haskins & Associates AI Concierge">
+  <div class="ha-ai-head">
+    <div class="ha-ai-head-left">
+      <div class="ha-ai-logo">◆</div>
+      <div>
+        <div class="ha-ai-title">Haskins & Associates</div>
+        <div class="ha-ai-sub">Smart Financial Concierge</div>
+      </div>
+    </div>
+    <button class="ha-ai-close" id="ha-ai-close" aria-label="Close">×</button>
+  </div>
+
+  <div class="ha-ai-messages" id="ha-ai-messages"></div>
+
+  <div class="ha-ai-quick">
+    <button class="ha-chip" data-q="I need retirement planning">Retirement</button>
+    <button class="ha-chip" data-q="I want to invest">Investments</button>
+    <button class="ha-chip" data-q="I need life cover">Protection</button>
+    <button class="ha-chip" data-q="I need short term insurance">Insurance</button>
+    <button class="ha-chip" data-q="I need estate planning">Wills & Estate</button>
+    <button class="ha-chip" data-q="I own a business">Business</button>
+  </div>
+
+  <div class="ha-ai-inputrow">
+    <input id="ha-ai-input" type="text" autocomplete="off" placeholder="Ask me where to start…" />
+    <button id="ha-ai-send">Send</button>
+  </div>
+
+  <div class="ha-ai-disclaimer">
+    General guidance only. This assistant does not provide personalised financial advice.
+    A licensed adviser will confirm suitability after understanding your circumstances.
+  </div>
+</section>
+
+<script>
+(function(){
+  const panel = document.getElementById('ha-ai-panel');
+  const launcher = document.getElementById('ha-ai-launcher');
+  const closeBtn = document.getElementById('ha-ai-close');
+  const input = document.getElementById('ha-ai-input');
+  const send = document.getElementById('ha-ai-send');
+  const messages = document.getElementById('ha-ai-messages');
+
+  const advisers = {
+    general: "Hamilton Haskins — Practice Principal | Senior Financial Adviser",
+    senior1: "Clive Wildemans — Senior Financial Adviser",
+    senior2: "Derek Jupp — Senior Financial Adviser",
+    associate: "Divan Potgieter — Associate Financial Adviser"
+  };
+
+  const intents = [
+    {
+      keys:["retire","retirement","pension","living annuity","retirement annuity","preservation"],
+      label:"Retirement Planning",
+      text:"Retirement planning is about building enough capital, choosing an appropriate income strategy and reviewing the plan as your needs change."
+    },
+    {
+      keys:["invest","investment","wealth","unit trust","portfolio","save","savings","lump sum"],
+      label:"Investments & Wealth",
+      text:"Investment planning starts with your time horizon, objectives, risk tolerance, tax position and need for access to capital."
+    },
+    {
+      keys:["life cover","life insurance","disability","severe illness","income protection","risk cover","protect my family"],
+      label:"Risk & Family Protection",
+      text:"Protection planning can include life cover, disability, severe illness and income protection to help protect your family and financial plan."
+    },
+    {
+      keys:["short term","car insurance","home insurance","building insurance","contents insurance","all risk","business insurance"],
+      label:"Short-Term Insurance",
+      text:"Short-term insurance can protect your vehicle, home, contents, portable possessions and business assets. Cover should be reviewed against current replacement values and your actual risk needs."
+    },
+    {
+      keys:["will","estate","executor","legacy","trust","beneficiary"],
+      label:"Wills & Estate Planning",
+      text:"Estate planning considers your will, beneficiaries, liquidity, estate costs and how assets should pass to the people or causes important to you."
+    },
+    {
+      keys:["business","key person","buy sell","shareholder","succession","business assurance"],
+      label:"Business Assurance",
+      text:"Business assurance can help protect owners and the business against risks such as death, disability, succession challenges and loss of a key person."
+    },
+    {
+      keys:["education","school fees","university","children"],
+      label:"Education Planning",
+      text:"Education planning helps estimate future education costs and structure a realistic savings strategy over time."
+    }
+  ];
+
+  function addMsg(text, who="bot", html=false){
+    const el = document.createElement("div");
+    el.className = "ha-msg " + who;
+    if(html) el.innerHTML = text; else el.textContent = text;
+    messages.appendChild(el);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function openBot(){
+    panel.classList.add("open");
+    if(!messages.dataset.started){
+      messages.dataset.started = "1";
+      addMsg("Welcome to Haskins & Associates. I can help you identify the right starting point and connect you with an adviser.\n\nWhat would you like help with?");
+    }
+    setTimeout(()=>input.focus(),100);
+  }
+
+  function detectIntent(q){
+    const s = q.toLowerCase();
+    let best = null, score = 0;
+    intents.forEach(it=>{
+      let n = 0;
+      it.keys.forEach(k=>{ if(s.includes(k)) n++; });
+      if(n > score){ score=n; best=it; }
+    });
+    return best;
+  }
+
+  function reply(q){
+    const s = q.toLowerCase();
+
+    if(/(hello|hi|good morning|good afternoon|good evening|hey)\b/.test(s)){
+      return "Hello. I’m here to help you find the right starting point. You can ask about retirement, investments, protection, insurance, estate planning or business planning.";
+    }
+
+    if(/(who are you|what can you do|help me)/.test(s)){
+      return "I’m the Haskins & Associates Smart Financial Concierge. I can help identify your planning need, explain our service areas in plain language and direct you to the enquiry form. I do not replace personalised advice from an adviser.";
+    }
+
+    if(/(hamilton|clive|derek|divan|adviser|advisor|associate)/.test(s)){
+      return `Our adviser team includes:\n• ${advisers.general}\n• ${advisers.senior1}\n• ${advisers.senior2}\n• ${advisers.associate}\n\nYou can select your preferred adviser on the enquiry form.`;
+    }
+
+    if(/(book|appointment|consult|meeting|call me|contact me|speak to someone|talk to someone)/.test(s)){
+      return `I can take you to the enquiry form now. Please complete your details and select the Associate you would like to speak to.\n\n<a class="ha-ai-link" href="#contact" onclick="document.getElementById('ha-ai-panel').classList.remove('open')">Book a private consultation →</a>`;
+    }
+
+    if(/(cost|fee|fees|price|premium|how much)/.test(s)){
+      return "Costs depend on the service or product being discussed. The best next step is a short conversation so the adviser can understand what you need before discussing any applicable costs.";
+    }
+
+    const intent = detectIntent(q);
+    if(intent){
+      return `${intent.text}\n\nA good next step is to discuss your circumstances with one of our advisers.\n\n<a class="ha-ai-link" href="#contact" onclick="document.getElementById('interest') && (document.getElementById('interest').value='${intent.label}'); document.getElementById('ha-ai-panel').classList.remove('open')">Continue to enquiry →</a>`;
+    }
+
+    return "That may require a more personal discussion. I can help you connect with the right adviser rather than guess.\n\n<a class=\"ha-ai-link\" href=\"#contact\" onclick=\"document.getElementById('ha-ai-panel').classList.remove('open')\">Send us your enquiry →</a>";
+  }
+
+  function handleSend(q){
+    q = (q || input.value).trim();
+    if(!q) return;
+    addMsg(q,"user");
+    input.value="";
+    setTimeout(()=>{
+      const ans = reply(q);
+      addMsg(ans,"bot",ans.includes("<a "));
+    },220);
+  }
+
+  launcher.addEventListener("click", openBot);
+  closeBtn.addEventListener("click", ()=>panel.classList.remove("open"));
+  send.addEventListener("click", ()=>handleSend());
+  input.addEventListener("keydown", e=>{ if(e.key==="Enter") handleSend(); });
+  document.querySelectorAll(".ha-chip").forEach(btn=>{
+    btn.addEventListener("click",()=>handleSend(btn.dataset.q));
+  });
+})();
+</script>
