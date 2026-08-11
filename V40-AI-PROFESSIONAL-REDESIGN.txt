@@ -1,0 +1,14 @@
+Haskins & Associates v40
+
+AI Concierge presentation repaired:
+- Removed nested/double scrollbar appearance.
+- Removed horizontal scrollbar from quick-action buttons.
+- Fixed input/button layout and clipping.
+- Reduced chatbot size for a more professional desktop presentation.
+- Improved mobile sizing.
+- Cleaner message spacing and typography.
+- Removed repetitive 'Would you like to speak to an adviser?' wording.
+- Replaced it with one concise 'Send an enquiry' handoff.
+- Existing working AI logic retained.
+- Existing v39 security hardening retained.
+- FormSubmit lead destination remains hphaskins68@gmail.com.
