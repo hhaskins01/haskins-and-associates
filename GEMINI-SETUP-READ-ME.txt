@@ -1,0 +1,26 @@
+HASKINS & ASSOCIATES — GEMINI AI SETUP
+
+The website is Gemini-ready, but Gemini cannot be activated safely by placing an API key in GitHub HTML.
+
+ONE-TIME SETUP:
+1. Create a Gemini API key in Google AI Studio.
+2. Create a free Cloudflare Worker.
+3. Paste the contents of gemini-worker.js into the Worker and deploy.
+4. In the Worker's Settings > Variables and Secrets, add:
+   Name: GEMINI_API_KEY
+   Type: Secret
+   Value: your Gemini API key
+5. Copy the Worker URL, e.g. https://haskins-ai.<account>.workers.dev
+6. Open index.html and replace:
+   PASTE_YOUR_CLOUDFLARE_WORKER_URL_HERE
+   with that Worker URL.
+7. Upload the website files to GitHub Pages.
+8. Test the AI bot from the live website.
+
+DO NOT paste the Gemini API key into index.html or commit it to GitHub.
+
+LEADS:
+The existing FormSubmit enquiry form remains configured to send leads to:
+hhaskins@oldmutual.com
+
+The AI bot routes advice/meeting/quote requests to that enquiry form.

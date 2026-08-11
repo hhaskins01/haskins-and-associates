@@ -1,0 +1,16 @@
+Haskins & Associates v36 — Conversion & Client Journey Upgrade
+
+Implemented:
+- Weather remains removed.
+- Stronger 'Book a Financial Review' CTA.
+- New 'Why Haskins & Associates' trust/differentiator section.
+- Client journey choices for wealth, family protection, retirement, retired clients and business owners.
+- Clearer Associate selection with click-to-prefill enquiry form.
+- Insights & Resources section.
+- Trust/regulatory strip near the enquiry form.
+- 'Markets at a Glance' presentation retained.
+- Gemini AI Financial Concierge quick choices changed to goal-based prompts.
+- Gemini continues to route advice/meeting requests into the enquiry form.
+- FormSubmit lead delivery to hhaskins@oldmutual.com retained.
+- Divan Potgieter photo professionally re-aligned/cropped using CSS object-position.
+- Existing adviser hierarchy, SEO pages, legal pages and lead-capture functionality retained.

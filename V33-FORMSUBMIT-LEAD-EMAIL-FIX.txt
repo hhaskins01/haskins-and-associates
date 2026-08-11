@@ -1,0 +1,23 @@
+Haskins & Associates v33 — FormSubmit Lead Email Fix
+
+Configured according to FormSubmit's native HTML form method:
+- POST action: https://formsubmit.co/hhaskins@oldmutual.com
+- All important fields have name attributes.
+- Client email field is named "email" so FormSubmit can use it for Reply-To.
+- Table email template enabled.
+- Subject: NEW WEBSITE LEAD | Haskins & Associates
+- Successful submissions redirect to thank-you.html.
+- Honeypot spam field included.
+- CAPTCHA left enabled (FormSubmit recommends keeping it enabled).
+- Existing lead metadata and previous website functionality retained where compatible.
+
+ONE-TIME ACTIVATION:
+1. Publish v33 to GitHub Pages.
+2. Submit the contact form once.
+3. FormSubmit sends an activation email to hhaskins@oldmutual.com.
+4. Open that email and confirm/activate the form.
+5. Submit a second test lead.
+6. The second lead should arrive at hhaskins@oldmutual.com.
+
+Important:
+The form must be tested from the published website, not by opening index.html directly from a computer.
