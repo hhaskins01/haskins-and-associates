@@ -1,0 +1,16 @@
+name = "haskins-associates"
+main = "worker.js"
+compatibility_date = "2026-08-01"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "haskins-leads"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"

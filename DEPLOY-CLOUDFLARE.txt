@@ -1,0 +1,28 @@
+HASKINS & ASSOCIATES — CLOUDFLARE DEPLOYMENT
+
+This build includes:
+- Premium responsive website using the supplied emerald/diamond background
+- AI Financial Concierge powered by Cloudflare Workers AI
+- Lead form saved privately to Cloudflare D1
+- No Netlify dependency
+
+SETUP (Cloudflare account required)
+1. Install Node.js, then in a terminal install Wrangler:
+   npm install -g wrangler
+2. Sign in:
+   wrangler login
+3. Create the lead database:
+   wrangler d1 create haskins-leads
+4. Copy the database_id shown by Cloudflare into wrangler.toml, replacing:
+   REPLACE_WITH_YOUR_D1_DATABASE_ID
+5. Create the leads table:
+   wrangler d1 execute haskins-leads --remote --file=schema.sql
+6. Deploy from this folder:
+   wrangler deploy
+7. Cloudflare will provide a free *.workers.dev address. A custom domain can be connected later.
+
+LEADS
+Lead enquiries are stored in the D1 database. View/query them from Cloudflare Dashboard > Storage & Databases > D1 > haskins-leads.
+
+IMPORTANT
+The AI is deliberately restricted to general educational information and lead routing. It does not provide personalised financial advice or product recommendations. Have final regulatory, POPIA and Old Mutual brand/compliance wording approved before launch.
