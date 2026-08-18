@@ -1,1 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://YOUR-NETLIFY-SITE.netlify.app/</loc></url><url><loc>https://YOUR-NETLIFY-SITE.netlify.app/privacy.html</loc></url><url><loc>https://YOUR-NETLIFY-SITE.netlify.app/regulatory.html</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.haskinsandassociates.co.za/</loc></url>
+  <url><loc>https://www.haskinsandassociates.co.za/privacy.html</loc></url>
+  <url><loc>https://www.haskinsandassociates.co.za/regulatory.html</loc></url>
+  <url><loc>https://www.haskinsandassociates.co.za/services/business-assurance.html</loc></url>
+  <url><loc>https://www.haskinsandassociates.co.za/services/education-planning.html</loc></url>
+  <url><loc>https://www.haskinsandassociates.co.za/services/estate-planning.html</loc></url>
+  <url><loc>https://www.haskinsandassociates.co.za/services/investment-planning.html</loc></url>
+  <url><loc>https://www.haskinsandassociates.co.za/services/retirement-planning.html</loc></url>
+  <url><loc>https://www.haskinsandassociates.co.za/services/risk-planning.html</loc></url>
+  <url><loc>https://www.haskinsandassociates.co.za/services/short-term-insurance.html</loc></url>
+</urlset>

@@ -1,0 +1,42 @@
+HASKINS AND ASSOCIATES — CUSTOM WEBSITE ADDRESS
+
+Public website address:
+https://www.haskinsandassociates.co.za
+
+OPTION 1: CLOUDFLARE WORKERS (RECOMMENDED)
+
+This option retains the live Prime/Repo endpoint, guided concierge and lead
+database. Register or transfer haskinsandassociates.co.za, add the domain to
+your Cloudflare account, and update its nameservers at your domain registrar.
+The included wrangler.toml already assigns:
+
+  www.haskinsandassociates.co.za
+
+Deploy the website with:
+
+  wrangler deploy
+
+Cloudflare will handle the custom hostname and HTTPS certificate once the
+domain is active in the same account.
+
+OPTION 2: GITHUB PAGES
+
+Upload this package to the hhaskins01/haskins-and-associates repository.
+The included CNAME file declares www.haskinsandassociates.co.za.
+
+At your domain registrar, create this DNS record:
+
+  Type:  CNAME
+  Name:  www
+  Value: hhaskins01.github.io
+
+In GitHub, open the repository's Settings, choose Pages, enter
+www.haskinsandassociates.co.za as the custom domain, and enable HTTPS once
+GitHub verifies the DNS record.
+
+Important: GitHub Pages hosts the website but does not run the included
+Cloudflare Worker. Official live Prime/Repo updates, the AI endpoint and the
+lead database require a separately deployed Worker.
+
+The domain must be registered and its DNS managed by someone authorised by
+Haskins and Associates before this public address can work.
