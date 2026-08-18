@@ -1,0 +1,78 @@
+:root {
+  --bg: #151515;
+  --mint: #a5baa9;
+  --white: #f5f2eb;
+  --muted: #c6c1b6;
+  --line: rgba(198, 183, 155, .18);
+  --gold: #c6b79b;
+}
+
+body {
+  background: #151515 !important;
+  color: var(--white) !important;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif !important;
+  letter-spacing: .015em;
+}
+
+body::before {
+  background: radial-gradient(ellipse at 80% 8%, rgba(143, 174, 154, .08), transparent 34%), linear-gradient(180deg, #191918, #131313) !important;
+}
+
+nav {
+  background: rgba(21, 21, 20, .94) !important;
+  border-bottom-color: rgba(198, 183, 155, .17) !important;
+  padding: 22px 0 !important;
+}
+
+.page-wordmark {
+  align-items: center;
+  color: var(--white) !important;
+  display: inline-flex;
+  gap: 13px;
+  text-decoration: none;
+}
+
+.page-wordmark img { height: 47px; object-fit: contain; width: 47px; }
+.page-wordmark-text { display: grid; gap: 4px; line-height: 1; }
+.page-wordmark-text strong { font-size: 15px; font-weight: 600; letter-spacing: .18em; }
+.page-wordmark-text small { color: var(--gold); font-size: 8px; letter-spacing: .16em; text-transform: uppercase; }
+
+.wrap { width: min(1020px, calc(100% - 42px)) !important; }
+main { padding: 106px 0 !important; }
+
+.panel {
+  background: linear-gradient(145deg, rgba(36, 36, 34, .96), rgba(26, 26, 25, .98)) !important;
+  border: 1px solid rgba(198, 183, 155, .19) !important;
+  border-radius: 3px !important;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, .24) !important;
+  padding: 46px !important;
+}
+
+h1,
+h2 { font-family: Georgia, "Times New Roman", serif !important; font-weight: 400 !important; }
+h1 { color: var(--white) !important; letter-spacing: -.045em; }
+h2,
+.kicker,
+.top a,
+.panel a:not(.btn) { color: var(--gold) !important; }
+p,
+li { color: var(--muted) !important; line-height: 1.85 !important; }
+.small,
+.legal { border-color: rgba(198, 183, 155, .16) !important; color: #a49e93 !important; }
+
+.btn {
+  background: #d9d1c2 !important;
+  border: 1px solid #d9d1c2 !important;
+  border-radius: 2px !important;
+  color: #171716 !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: .07em;
+}
+
+@media (max-width: 620px) {
+  .wrap { width: calc(100% - 28px) !important; }
+  main { padding: 65px 0 !important; }
+  .panel { padding: 27px !important; }
+  h1 { font-size: 42px !important; }
+}

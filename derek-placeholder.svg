@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c4c3c"/><stop offset="1" stop-color="#071d18"/></linearGradient></defs>
+<rect width="600" height="720" rx="34" fill="url(#g)"/>
+<circle cx="300" cy="250" r="120" fill="#5bd6b1" opacity=".16"/>
+<circle cx="300" cy="220" r="74" fill="#dff8ef" opacity=".9"/>
+<path d="M160 570c12-118 86-180 140-180s128 62 140 180" fill="#dff8ef" opacity=".9"/>
+<text x="300" y="650" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="38" fill="#071d18">DEREK JUPP</text>
+</svg>
