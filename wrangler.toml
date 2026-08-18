@@ -2,10 +2,6 @@ name = "haskins-associates"
 main = "worker.js"
 compatibility_date = "2026-08-01"
 
-[[routes]]
-pattern = "www.haskinsandassociates.co.za"
-custom_domain = true
-
 [assets]
 directory = "."
 binding = "ASSETS"

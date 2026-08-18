@@ -19,19 +19,15 @@ SETUP (Cloudflare account required)
    wrangler d1 execute haskins-leads --remote --file=schema.sql
 6. Deploy from this folder:
    wrangler deploy
-7. Add haskinsandassociates.co.za to the same Cloudflare account and point the
-   domain registrar's nameservers to the Cloudflare nameservers provided.
-8. The included wrangler.toml already configures the public custom domain:
-   https://www.haskinsandassociates.co.za
-9. Deploy again with "wrangler deploy" if the domain was added afterwards.
-10. Confirm HTTPS is active and open:
-    https://www.haskinsandassociates.co.za
+7. Use the workers.dev address provided after deployment, if needed.
 
-CUSTOM DOMAIN
-The .co.za domain must first be registered or already owned by the practice.
-Configuration in this package does not register the domain automatically.
-Cloudflare hosting is recommended because it supports the live official
-Prime/Repo endpoint, Workers AI and the private D1 lead database.
+GITHUB PAGES
+The main website address is:
+https://hhaskins01.github.io/haskins-and-associates/
+
+No custom domain is configured or required. Cloudflare Workers is optional
+and can support the live official Prime/Repo endpoint, Workers AI, and the
+private D1 lead database.
 
 LEADS
 Lead enquiries are stored in the D1 database. View/query them from Cloudflare Dashboard > Storage & Databases > D1 > haskins-leads.

@@ -1,15 +1,18 @@
-HASKINS & ASSOCIATES — GITHUB PAGES SINGLE-FILE ASSET BUILD
+HASKINS AND ASSOCIATES - GITHUB PAGES
 
-This build embeds the logo, background and associate photos directly inside index.html, so no assets folder is required.
+Website address:
+https://hhaskins01.github.io/haskins-and-associates/
 
-Upload/replace these files at the ROOT of your GitHub repository:
-- index.html
-- 404.html
-- privacy.html
-- regulatory.html
-- robots.txt
-- sitemap.xml
-- .nojekyll
+1. Extract all files from this ZIP archive.
+2. Open the hhaskins01/haskins-and-associates GitHub repository.
+3. Upload the extracted contents to the main branch, ensuring index.html is
+   located at the repository root rather than inside an extra folder.
+4. In the repository, open Settings > Pages.
+5. Under Build and deployment, select Deploy from a branch.
+6. Select the main branch and the / (root) folder, then select Save.
+7. Leave Custom domain empty. No custom domain or CNAME file is required.
+8. Wait for GitHub Pages to publish the site, then open the address above.
 
-Do not upload the ZIP itself. Extract it first, then upload the files above.
-GitHub Pages source: main branch / (root).
+GitHub Pages hosts the static website and live third-party market widgets.
+Automatic official Prime/Repo updates, the AI endpoint, and the lead database
+require an optional separately deployed Cloudflare Worker.
